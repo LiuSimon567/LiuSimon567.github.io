@@ -1,6 +1,5 @@
-# Bobop.C Blog
-
-###[http://playingfingers.com](http://playingfingers.com)
+# Welcome to my blog
+###[http://LiuSimon567.github.io](http://LiuSimon567.github.io)
 
 
 ## Thanks
