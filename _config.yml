@@ -1,8 +1,8 @@
 # Site settings
-title: Bebop.C Blog
-SEOTitle: Bebop.C的博客 | Bebop.C Blog
+title: SimonLiu Blog
+SEOTitle: SimonLiu的博客 | SimonLiu Blog
 header-img: img/home-bg.jpg
-email: suburbia.x.chaos@gmail.com
+email: liusimon567@gmail.com
 description: "May Your Heart Be The Map"
 keyword: ""
 url: "http://playingfingers.com"              # your host, for absolute URL
@@ -13,7 +13,7 @@ baseurl: ""                             # for example, '/blog' if your blog host
 # SNS settings
 RSS: false
 # weibo_username:   
-github_username:    chaosinmotion  
+github_username:    LiuSimon567  
 #zhihu_username:     
 #twitter_username:  
 #facebook_username:  
@@ -43,7 +43,7 @@ kramdown:
 #disqus_username: _your_disqus_short_name_
 
 # Duoshuo settings
-duoshuo_username: Bebop.C
+duoshuo_username: SimonLiu
 # Share component is depend on Comment so we can NOT use share only.
 duoshuo_share: true                     # set to false if you want to use Comment without Sharing
 
