@@ -1,13 +1,11 @@
 ---
 layout:     post
 title:      "Github Pages + Jekyll 独立博客一小时快速搭建&上线指南"
-subtitle:   "分享你的知识和观点"
-date:       2016-03-26
-author:     "Bebop.C"
+date:       2020-2-23
+author:     "SimonLiu"
 header-img: "img/post-build-a-blog.jpg"
 tags:
-    - Git
-    - 建站
+    - 搭建博客
 ---
 
 
