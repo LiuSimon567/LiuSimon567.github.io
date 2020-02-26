@@ -1,0 +1,12 @@
+I"�<h1 id="meta-learning-with-latent-embedding-optimization">META-LEARNING WITH LATENT EMBEDDING OPTIMIZATION</h1>
+<p>本文主要在MAML的基础上进行改进。</p>
+
+<p>1、MAML直接在高维空间进行第一步梯度更新，而LEO是映射到低维空间进行第一步梯度更新，然后再映射回高维空间。</p>
+
+<p><img src="/img/in-post/post-paper-notes-2020-02-25/LEO.jpg" alt="LEO原理算法图" /></p>
+
+<p>2、MAML的参数没有随机性，而LEO借助生成器，随机生成参数，进一步增强泛化能力。
+<img src="/img/in-post/post-paper-notes-2020-02-25/generator1.jpg" alt="" />
+<img src="/img/in-post/post-paper-notes-2020-02-25/generator2.jpg" alt="" /></p>
+
+:ET
