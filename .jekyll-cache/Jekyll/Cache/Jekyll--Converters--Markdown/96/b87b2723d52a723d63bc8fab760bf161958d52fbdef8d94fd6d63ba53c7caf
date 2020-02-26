@@ -1,4 +1,13 @@
-I"�<h1 id="meta-learning-with-latent-embedding-optimization">META-LEARNING WITH LATENT EMBEDDING OPTIMIZATION</h1>
+I"m<hr />
+<p>layout:     post
+title:      “Paper notes 2020-2-25”
+date:       2020-2-25
+author:     “SimonLiu”
+header-img: “img/post-build-a-blog.jpg”
+tags:
+    - 论文笔记
+—</p>
+<h1 id="meta-learning-with-latent-embedding-optimization">META-LEARNING WITH LATENT EMBEDDING OPTIMIZATION</h1>
 <p>本文主要在MAML的基础上进行改进。</p>
 
 <p>1、MAML直接在高维空间进行第一步梯度更新，而LEO是映射到低维空间进行第一步梯度更新，然后再映射回高维空间。</p>
@@ -9,8 +18,8 @@
 <img src="/img/in-post/post-paper-notes-2020-02-25/generator1.jpg" alt="" />
 <img src="/img/in-post/post-paper-notes-2020-02-25/generator2.jpg" alt="" /></p>
 
-<p>#TADAM: Task dependent adaptive metric for improved few-shot learning
-本文主要在原型网络的基础上进行改进、</p>
+<h1 id="tadam-task-dependent-adaptive-metric-for-improved-few-shot-learning">TADAM: Task dependent adaptive metric for improved few-shot learning</h1>
+<p>本文主要在原型网络的基础上进行改进、</p>
 
 <p><img src="/img/in-post/post-paper-notes-2020-02-25/TADAM.jpg" alt="TADAM原理算法图" /></p>
 
@@ -18,7 +27,9 @@
 
 <p>2、Task Conditioning：构造一个TEN network，通过输入样本数据来得到task representation，并利用此作为condition来改变feature extractor的输出，也就是使得每一个task的feature extractor都不一样，具备adaptation的能力。</p>
 
-<p>3、Auxiliary task co-training:</p>
+<p><img src="/img/in-post/post-paper-notes-2020-02-25/TEN.jpg" alt="TEN框架图" /></p>
+
+<p>3、Auxiliary task co-training: 用传统训练方法生成batch，</p>
 
 <p>AM3将其中TEN的输入由该任务中所有类原型的均值变为语义信息。</p>
 :ET

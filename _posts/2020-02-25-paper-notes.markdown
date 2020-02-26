@@ -1,4 +1,4 @@
----
+ ---
 layout:     post
 title:      "Paper notes 2020-2-25"
 date:       2020-2-25
@@ -25,10 +25,14 @@ tags:
 ![TADAM原理算法图](/img/in-post/post-paper-notes-2020-02-25/TADAM.jpg)
 
 
-1、Metric Scaling：在similarity metric的基础上学习一个scaling factor，这样能够更好的使得输出的metric在合适的范围内
+1、Metric Scaling：在similarity metric的基础上学习一个scaling factor，这样能够更好的使得输出的metric在合适的范围内，当\alpha趋近于0时候，metric函数会拉近query与其对应类中心的距离，拉远所有与其不对应类中心的距离，而当\alpha趋近于无穷的时候，metric函数仍然拉近query与其对应类中心的距离，但会拉远query与其最难区别的不对应类中心的距离，类似soft triple loss和hard triple loss之间的关系。
 
-2、Task Conditioning：构造一个TEN network，通过输入样本数据来得到task representation，并利用此作为condition来改变feature extractor的输出，也就是使得每一个task的feature extractor都不一样，具备adaptation的能力。
+![metric Scaling](/img/in-post/post-paper-notes-2020-02-25/metric.jpg)
 
-3、Auxiliary task co-training: 
+2、Task Conditioning：构造一个TEN network，通过输入样本数据来得到task representation，并利用此作为condition得到$\alpha$、$\beta$来改变feature extractor的输出，也就是使得每一个task的feature extractor都不一样，具备adaptation的能力,此处的task representation使用各个类原型的平均来表示。
+
+![TEN框架图](/img/in-post/post-paper-notes-2020-02-25/TEN.jpg)
+
+3、Auxiliary task co-training: 用传统训练方法生成batch数据，和episode策略一起训练网络，不仅能加快网络收敛速度，还能得到更好的结果。
 
 AM3将其中TEN的输入由该任务中所有类原型的均值变为语义信息。
