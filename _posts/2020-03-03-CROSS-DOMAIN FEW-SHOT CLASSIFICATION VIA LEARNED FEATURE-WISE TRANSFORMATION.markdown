@@ -10,7 +10,7 @@ tags:
 # CROSS-DOMAIN FEW-SHOT CLASSIFICATION VIA LEARNED FEATURE-WISE TRANSFORMATION
 本文提出一个即插即用模块——仿射变换层，将其用于MatchingNet、RelationNet、GNN等现有方法，都得到了不错的提升，尤其在跨域数据集上的。
 
-![算法原理图](/img/in-post/CROSS-DOMAIN FEW-SHOT CLASSIFICATION VIA LEARNED FEATURE-WISE TRANSFORMATION/framework.jpg)
+![算法原理图](/img/in-post/post-paper-notes-CROSS-DOMAIN FEW-SHOT CLASSIFICATION VIA LEARNED FEATURE-WISE TRANSFORMATION/framework.jpg)
 
 1、本文提出的仿射变换层在TADAM已有使用，但网络结构貌似不同。
 

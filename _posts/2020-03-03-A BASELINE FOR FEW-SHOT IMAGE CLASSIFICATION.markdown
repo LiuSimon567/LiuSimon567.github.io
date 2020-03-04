@@ -25,6 +25,10 @@ tags:
 
 （META-LEARNING FOR SEMI-SUPERVISED FEW-SHOT CLASSIFICATION中说到转导和半监督其实有联系，如果把转导的那些数据不放到queryset中，那么也就是半监督的方法）
 
-3、本文提出一种新的评价指标，类似AOU，通过计算way数逐渐增多情况下方法准确率曲线下的面积，来衡量方法的好坏。
+3、本文提出一种评价episode难易程度的指标omiga，并根据它提出新的评价小样本方法好坏的指标，类似AOU，通过计算way数逐渐增多情况下方法准确率曲线下的面积，来衡量方法的好坏。
+
+![omiga](/img/in-post/post-paper-notes-A BASELINE FOR FEW-SHOT IMAGE CLASSIFICATION/hardness.jpg)
+
+![plot](/img/in-post/post-paper-notes-A BASELINE FOR FEW-SHOT IMAGE CLASSIFICATION/plot.jpg)
 
 4、我认为类似baseline的传统训练策略效果好的主要原因是可以在test阶段根据supportset中数据进行finetune，而基于metric的很多方法，例如protoNet、RelationNet不具备这种功能，基于MAML的方法倒是也有这种finetune的过程。
