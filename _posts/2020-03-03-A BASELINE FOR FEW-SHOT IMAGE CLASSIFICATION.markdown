@@ -31,4 +31,8 @@ tags:
 
 ![plot](/img/in-post/post-paper-notes-A BASELINE FOR FEW-SHOT IMAGE CLASSIFICATION/plot.jpg)
 
-4、我认为类似baseline的传统训练策略效果好的主要原因是可以在test阶段根据supportset中数据进行finetune，而基于metric的很多方法，例如protoNet、RelationNet不具备这种功能，基于MAML的方法倒是也有这种finetune的过程。
+4、本文还对acc与way、shot之间的关系进行大量实验，结果表明他们之间是对数级关系。
+![plot](/img/in-post/post-paper-notes-A BASELINE FOR FEW-SHOT IMAGE CLASSIFICATION/shot_way.jpg)
+
+5、我认为类似baseline的传统训练策略效果好的主要原因是可以在test阶段根据supportset中数据进行finetune，而基于metric的很多方法，例如protoNet、RelationNet不具备这种功能，基于MAML的方法倒是也有这种finetune的过程。（baseline测试时在supportset上finetune通常设定轮数，closelook中设为100轮
+MAML测试时也需要finetune，原文中它的finetune在不同数据集不同way shot时都不同，但最多是10轮）
