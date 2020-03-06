@@ -23,6 +23,10 @@ tags:
 
 ![loss](/img/in-post/post-paper-notes-A BASELINE FOR FEW-SHOT IMAGE CLASSIFICATION/loss.jpg)
 
+最小熵的约束在way数很多的情况下效果不好，原因是way数越多，最小熵的数值越大，会超过分类的交叉熵，从而影响结果，因此最小熵需要除以log|C|进行标准化，C为way数。
+
+![loss](/img/in-post/post-paper-notes-A BASELINE FOR FEW-SHOT IMAGE CLASSIFICATION/large_way.jpg)
+
 （META-LEARNING FOR SEMI-SUPERVISED FEW-SHOT CLASSIFICATION中说到转导和半监督其实有联系，如果把转导的那些数据不放到queryset中，那么也就是半监督的方法）
 
 3、本文提出一种评价episode难易程度的指标omiga，并根据它提出新的评价小样本方法好坏的指标，类似AOU，通过计算way数逐渐增多情况下方法准确率曲线下的面积，来衡量方法的好坏。
