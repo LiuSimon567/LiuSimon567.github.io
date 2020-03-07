@@ -1,0 +1,34 @@
+I"�
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
+<h1 id="meta-learning-with-latent-embedding-optimization">META-LEARNING WITH LATENT EMBEDDING OPTIMIZATION</h1>
+<p>本文主要在MAML的基础上进行改进。</p>
+
+<p>1、MAML直接在高维空间进行第一步梯度更新，而LEO是映射到低维空间进行第一步梯度更新，然后再映射回高维空间。</p>
+
+<p><img src="/img/in-post/post-paper-notes-LEO and TADAM/LEO.jpg" alt="LEO原理算法图" /></p>
+
+<p>2、MAML的参数没有随机性，而LEO借助生成器，生成符合正态分布的参数，进一步增强泛化能力。
+<img src="/img/in-post/post-paper-notes-LEO and TADAM/generator1.jpg" alt="" />
+<img src="/img/in-post/post-paper-notes-LEO and TADAM/generator2.jpg" alt="" /></p>
+
+<h1 id="tadam-task-dependent-adaptive-metric-for-improved-few-shot-learning">TADAM: Task dependent adaptive metric for improved few-shot learning</h1>
+<p>本文主要在原型网络的基础上进行改进、</p>
+
+<p><img src="/img/in-post/post-paper-notes-LEO and TADAM/TADAM.jpg" alt="TADAM原理算法图" /></p>
+
+<p>1、Metric Scaling：在similarity metric的基础上学习一个scaling factor，这样能够更好的使得输出的metric在合适的范围内，当$\alpha$<img src="http://chart.googleapis.com/chart?cht=tx&amp;chl= $\alpha$" style="border:none;" />趋近于0时候，metric函数会拉近query与其对应类中心的距离，拉远所有与其不对应类中心的距离，而当$\alpha$趋近于无穷的时候，metric函数仍然拉近query与其对应类中心的距离，但会拉远query与其最难区别的不对应类中心的距离，类似soft triple loss和hard triple loss之间的关系。</p>
+
+<p><img src="/img/in-post/post-paper-notes-LEO and TADAM/metric.jpg" alt="metric Scaling" /></p>
+
+<p>2、Task Conditioning：构造一个TEN network，通过输入样本数据来得到task representation，并利用此作为condition得到$\alpha$、$\beta$来改变feature extractor的输出，也就是使得每一个task的feature extractor都不一样，具备adaptation的能力,此处的task representation使用各个类原型的平均来表示。</p>
+
+<p><img src="/img/in-post/post-paper-notes-LEO and TADAM/TEN.jpg" alt="TEN框架图" /></p>
+
+<p>3、Auxiliary task co-training: 用传统训练方法生成batch数据，和episode策略一起训练网络，不仅能加快网络收敛速度，还能得到更好的结果。</p>
+
+<p>AM3将其中TEN的输入由该任务中所有类原型的均值变为语义信息。</p>
+
+<p><img src="http://chart.googleapis.com/chart?cht=tx&amp;chl= $\alpha$" style="border:none;" />
+<img src="http://www.forkosh.com/mathtex.cgi? $alpha$" /></p>
+:ET
