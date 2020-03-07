@@ -31,7 +31,7 @@ tags:
 
 ![metric Scaling](/img/in-post/post-paper-notes-LEO and TADAM/metric.jpg)
 
-2、Task Conditioning：构造一个TEN network，通过输入样本数据来得到task representation，并利用此作为condition得到$\alpha$、$\beta$来改变feature extractor的输出，也就是使得每一个task的feature extractor都不一样，具备adaptation的能力,此处的task representation使用各个类原型的平均来表示。
+2、Task Conditioning：构造一个TEN network，通过输入样本数据来得到task representation，并利用此作为condition得到$\gamma$、$\beta$来改变feature extractor的输出，也就是使得每一个task的feature extractor都不一样，具备adaptation的能力,此处的task representation使用各个类原型的平均来表示。
 
 ![TEN框架图](/img/in-post/post-paper-notes-LEO and TADAM/TEN.jpg)
 
@@ -39,8 +39,3 @@ tags:
 
 AM3将其中TEN的输入由该任务中所有类原型的均值变为语义信息。
 
-$\Sigma = \\{0, 1\\}$
-
-$$
-A = \{ \langle G \rangle \vert G \text{ is a connected undirected graph}\}
-$$
