@@ -41,3 +41,6 @@ tags:
 
 5、我认为类似baseline的传统训练策略效果好的主要原因是可以在test阶段根据supportset中数据进行finetune，而基于metric的很多方法，例如protoNet、RelationNet不具备这种功能，基于MAML的方法倒是也有这种finetune的过程。（baseline测试时在supportset上finetune通常设定轮数，closelook中设为100轮
 MAML测试时也需要finetune，原文中它的finetune在不同数据集不同way shot时都不同，但最多是10轮）
+
+6、本文指出目前miniImageNet数据集split的方式还有区别，很少有使用matchingNet版的split（Matching Networks for One Shot Learning），好像只有他自己使用；其余貌似都使用meta-learning-lstm版的split（OPTIMIZATION AS A MODEL FOR FEW-SHOT LEARNING），例如protoNet、gnn等。
+![](/img/in-post/post-paper-notes-A BASELINE FOR FEW-SHOT IMAGE CLASSIFICATION/split.jpg)

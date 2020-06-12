@@ -1,0 +1,29 @@
+I"+	<h1 id="protoattend-attention-based-prototypical-learning-iclr2020">PROTOATTEND: ATTENTION-BASED PROTOTYPICAL LEARNING (ICLR2020)</h1>
+
+<p>本文是将原型思想应用于神经网络可解释性的一篇文章。</p>
+
+<p><img src="/img/in-post/post-paper-notes-ProtoAttend and DBLE/ProtoAttend.jpg" alt="" /></p>
+
+<p>主体思路是将一个样本用尽可能稀疏的原型点重构出来，训练时原样本与原型点重构的样本都进行监督学习，而在测试时只用重构样本进行类别预测。下面是一些结果的展示。</p>
+
+<p><img src="/img/in-post/post-paper-notes-ProtoAttend and DBLE/example.jpg" alt="" /></p>
+
+<h1 id="distance-based-learning-from-errors-for-confidence-calibration-iclr2020">DISTANCE-BASED LEARNING FROM ERRORS FOR CONFIDENCE CALIBRATION (ICLR2020)</h1>
+
+<p>本文是将原型思想应用于模型概率校准的一篇文章。通常我们将网络最后层softmax的值看做属于各个类别的概率，但其实这是欠妥的，网络往往会对它没有把握的样本也给予较高概率的预测，因此需要进行概率的校准。</p>
+
+<p><img src="/img/in-post/post-paper-notes-ProtoAttend and DBLE/DBLE.jpg" alt="" /></p>
+
+<p>如上图，本文与原型网络很相似，不同点在于原型网络中样本与各个类别的距离经过softmax后即为属于该类别的概率，而在DBLE中，该概率需要校准。</p>
+
+<p>训练时过程中，如果该样本分类错误，其概率才需要校准。假设它服从各向同性的高斯分布，以该样本为均值，那么其方差 $\sigma$ 就应该较大，这样重新sample出的样本才能尽可能地接近真实类别。</p>
+
+<p>而测试时因为不知道真实标签，所以所有样本的概率都需要校准。具体操作是利用训练好的 $\sigma$ 进行sample，取多次sample出的样本预测均值作为最终的预测概率。</p>
+
+<p><img src="/img/in-post/post-paper-notes-ProtoAttend and DBLE/calibration.jpg" alt="" /></p>
+
+<p>概率校准的评价标准并不是简单的acc，本文还使用了Expected Calibration Error(ECE) 和Negative Log Likelihood(NLL)，
+#总结</p>
+
+<p>这两篇文章想法有共通之处，都借助了父类祖先类（超类）使网络学习到的知识更好地迁移到没有见过的新类上，那么这种超类的思想能否与GNN相结合呢？</p>
+:ET

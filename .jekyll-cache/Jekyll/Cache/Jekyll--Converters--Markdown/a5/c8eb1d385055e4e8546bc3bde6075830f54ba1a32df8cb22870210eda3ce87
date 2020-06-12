@@ -1,0 +1,32 @@
+I"<h1 id="protoattend-attention-based-prototypical-learning-iclr2020">PROTOATTEND: ATTENTION-BASED PROTOTYPICAL LEARNING (ICLR2020)</h1>
+
+<p>本文是将原型思想应用于神经网络可解释性的一篇文章。</p>
+
+<p><img src="/img/in-post/post-paper-notes-ProtoAttend and DBLE/ProtoAttend.jpg" alt="" /></p>
+
+<h1 id="distance-based-learning-from-errors-for-confidence-calibration">DISTANCE-BASED LEARNING FROM ERRORS FOR CONFIDENCE CALIBRATION</h1>
+
+<p>本文主要是在特征提取上作文章，最后的分类借助protoNet中的metric方法，其实还可以用其他metric的方法。</p>
+
+<p><img src="/img/in-post/post-paper-notes-PPN and Large-Scale Few-Shot Learning Knowledge Transfer With Class/framework2.jpg" alt="" /></p>
+
+<p>1、Class Hierarchy</p>
+
+<p>minImageNet中的每个类名称在glove2vec中都可以找到，因此借助glove2vec对类名称进行K-means的聚类。文中实验过不同的分层聚类数，最红发现分三层，分别为底层叶子结点200类，中间层40类和顶层8类，效果最好。</p>
+
+<p>本文构建Class Hierarchy使用了target classes，但其实不使用target，也能达到不错的效果。</p>
+
+<p><img src="/img/in-post/post-paper-notes-PPN and Large-Scale Few-Shot Learning Knowledge Transfer With Class/k-means.jpg" alt="" /></p>
+
+<p>2、特征提取模块</p>
+
+<p>train时使用传统的训练策略，而最终test时，只用其中的CNN部分。</p>
+
+<p><img src="/img/in-post/post-paper-notes-PPN and Large-Scale Few-Shot Learning Knowledge Transfer With Class/feature.jpg" alt="" /></p>
+
+<p>3、本文test时因为使用metric的方法，所以没有对CNN进行微调，其实可以用传统训练法，借助supportset进行微调，不知效果如何。但也有可能正是因为固定住CNN，才使得train时的knowledge得以很好地transfer。</p>
+
+<p>#总结</p>
+
+<p>这两篇文章想法有共通之处，都借助了父类祖先类（超类）使网络学习到的知识更好地迁移到没有见过的新类上，那么这种超类的思想能否与GNN相结合呢？</p>
+:ET

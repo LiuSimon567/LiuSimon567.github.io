@@ -1,0 +1,20 @@
+I"�<h1 id="protoattend-attention-based-prototypical-learning-iclr2020">PROTOATTEND: ATTENTION-BASED PROTOTYPICAL LEARNING (ICLR2020)</h1>
+
+<p>本文是将原型思想应用于神经网络可解释性的一篇文章。</p>
+
+<p><img src="/img/in-post/post-paper-notes-ProtoAttend and DBLE/ProtoAttend.jpg" alt="" /></p>
+
+<p>主体思路是将一个样本用尽可能稀疏的原型点重构出来，训练时原样本与原型点重构的样本都进行监督学习，而在测试时只用重构样本进行类别预测。下面是一些结果的展示。</p>
+
+<p><img src="/img/in-post/post-paper-notes-ProtoAttend and DBLE/example.jpg" alt="" /></p>
+
+<h1 id="distance-based-learning-from-errors-for-confidence-calibration-iclr2020">DISTANCE-BASED LEARNING FROM ERRORS FOR CONFIDENCE CALIBRATION (ICLR2020)</h1>
+
+<p>本文是将原型思想应用于模型概率校准的一篇文章。</p>
+
+<p><img src="/img/in-post/post-paper-notes-PPN and Large-Scale Few-Shot Learning Knowledge Transfer With Class/framework2.jpg" alt="" /></p>
+
+<p>#总结</p>
+
+<p>这两篇文章想法有共通之处，都借助了父类祖先类（超类）使网络学习到的知识更好地迁移到没有见过的新类上，那么这种超类的思想能否与GNN相结合呢？</p>
+:ET

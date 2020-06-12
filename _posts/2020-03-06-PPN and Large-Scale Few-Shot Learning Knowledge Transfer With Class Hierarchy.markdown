@@ -3,6 +3,7 @@ layout:     post
 title:      "笔记——PPN和Large-Scale Few-Shot Learning Knowledge Transfer With Class Hierarchy"
 date:       2020-3-6
 author:     "SimonLiu"
+mathjax:    true
 header-img: "img/post-build-a-blog.jpg"
 tags:
     - 论文笔记
